@@ -223,9 +223,77 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+.card {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-cards {
+    margin-top: 33px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.hebergements .card {
+    width: 240px;
+    height: 190px;
+}
+
+
+.hebergements-cards img {
+    box-sizing: border-box;
+    width: 240px;
+    height: 110px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content{
+    padding-left: 10px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.showMore {
+    padding: 20px;
+}
+.showMore a {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
 }
 
 /****** Populaires ***********/
@@ -273,6 +341,33 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+/******** Activités ********/
+
+.activites {
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activiesCard{
+
+box-sizing: border-box;
+width: 240px;
+height: 110px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+.activites {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
 
 
 
@@ -288,7 +383,7 @@ nav a:hover {
     .hebergements {
         width: 100%;
     }
-
+    
     .populaires {
         width: 100%;
         margin-top: 50px;
