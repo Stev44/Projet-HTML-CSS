@@ -1,0 +1,43 @@
+/****** Header *******/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav a {
+    margin-left: 60px;
+}
+
+nav a:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    padding-top: 26px;
+}
+
+/******* Footer *******/
+
+.footer {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textGroup {
+    padding: 20px
+}
+
+.textGroup a {
+    font-size: 16px;
+}
