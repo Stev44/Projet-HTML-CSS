@@ -56,6 +56,10 @@
     .activitesCard img {
         height: 200px;
     }
+    
+    .activiteTitle {
+        font-size: 14px;
+    }
 
     .footer {
         margin-top: 60px;
