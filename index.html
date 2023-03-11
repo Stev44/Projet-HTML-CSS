@@ -19,41 +19,56 @@
         <header>
             <nav>
                 <img src="images/logo/Booki06.png" alt="logo">
-                <div>
+                <div class="navLink">
+                    <div class="link1">
                     <a href="#ancreHebergements">Hébergements</a>
+                    </div>
+                    <div class="link2">
                     <a href="#ancreActivites">Activités</a>
+                    </div>
                 </div>
             </nav>   
         </header>
         <main>
-            <section>
+            <section class="mobileFind">
                 <div class="find">
                 <h1 id="ancreHebergements">Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div class="centerSearch borderSearch">
-                    <div class="backGrey centerSearch iconSize"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="centerSearch">
+                    <div class="borderSearch centerContent">
+                    <div><i class="fa-solid fa-location-dot iconSize centerContent backGrey"></i></div>
                     <div>
                         <form method="get" action="">
-                        <input class="search borderNone paddingSearch centerSearch" type="search" value="Marseille, France">
+                        <input class="search borderNone paddingSearch centerContent" type="search" value="Marseille, France">
                         </form>
                     </div>
-                    <div><button class="backBlue borderNone buttonSearch centerSearch">Rechercher</button></div>
+                    <div class="desktopButton"><button class="backBlue borderNone buttonSearch centerContent">Rechercher</button></div>
+                    <div class="mobileButton"><button class="backBlue borderNone buttonSearch centerSearch"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+                    </div>
                 </div>
             </section>
             <section class="filter">
-                <div class="filterCenter">
+                <div class="filterCenter mobileFilter">
+                    <div class="filter2">
                     <div class="textFilter"><h3>Filtres</h3></div>
-                    <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-money-bill-wave"></i> Économique</a></div>
-                    <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-person"></i> Familial</a></div>
-                    <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-heart"></i> Romantique</a></div>
-                    <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-fire"></i> Nos pépites</a></div>
-                </div>
-                <div class="infoCenter">
-                    <div class="iconInfo"><div class="iconInfo2"><i class="fa-solid fa-info"></i></div></div>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    </div>
+                    <div class="groupFilter">
+                        <div class="group1">
+                        <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-money-bill-wave"></i> Économique</a></div>
+                        <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-person"></i> Familial</a></div>
+                        </div>
+                        <div class="group2">
+                        <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-heart"></i> Romantique</a></div>
+                        <div class="borderFilter textFilter hoverFilter"><a href="#"><i class="fa-solid fa-fire"></i> Nos pépites</a></div>
+                        </div>
+                    </div>
                 </div>
             </section>
+            <div class="infoCenter">
+                <div class="iconInfo"><i class="fa-solid fa-info"></i></div>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
                     <h2 class="section-title">Hébergements à Marseille</h2>
@@ -236,13 +251,15 @@
                                     <i class="fa-xs fa-solid fa-star neutralStar" aria-hidden="true"></i>
                                     <span class="sr-only">Note de 4 sur 5</span>
                                 </div>
-                            </div>   
+                            </div>
                         </article>
                     </div>
                 </section>
             </div>
             <section class="activites">
-                    <h2 class="activitesH2 section-title" id="ancreActivites">Activités à Marseille</h2>
+                <div class="activitesH2">
+                <h2 class="section-title" id="ancreActivites">Activités à Marseille</h2>
+                </div>
                 <div class="activitesCard">
                     <article class="card">
                         <a href="#">
@@ -281,18 +298,18 @@
         </main>
         <footer>
             <div class="footer backGrey">
-                <div class="group">
+                <div class="textGroup">
                     <h3>À propos</h3>
                     <p><a href="#">Fonctionnement du site</a></p>
                     <p><a href="#">Conditions générales</a></p>
                     <p><a href="#">Données et confidentialité</a></p>
                 </div>
-                <div class="group">
+                <div class="textGroup">
                     <h3>Nos hébergements</h3>
                     <p><a href="#">Charte qualité</a></p>
                     <p><a href="#">Proposer votre hôtel</a></p>
                 </div>
-                <div class="group">
+                <div class="textGroup">
                     <h3>Assistance</h3>
                     <p><a href="#">Centre d’aide</a></p>
                     <p><a href="#">Nous contacter</a></p>

@@ -57,7 +57,6 @@ a {
     text-decoration: none;
     color: black;
 }
-
 /****** Header *******/
 
 nav {
@@ -66,6 +65,12 @@ nav {
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 30px;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 nav a {
@@ -89,6 +94,13 @@ nav a:hover {
 .centerSearch {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -103,7 +115,7 @@ nav a:hover {
 }
 
 .borderSearch {
-    width: 400px;
+    
     border-radius: 10px;
     border: 0.5px solid #F2F2F2 ;
 }
@@ -124,7 +136,7 @@ nav a:hover {
 
 .search {
     height: 50px;
-    width: 100%;
+    width: 300px;
     font-size: 18px;
     font-weight: bold;
     color: black
@@ -144,19 +156,40 @@ nav a:hover {
     border-radius: 0 10px 10px 0;
 }
 
+.mobileButton {
+    display: none;
+}
+
 /****** Filtres ********/
 
 .filter {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .filterCenter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 63%;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+}
+
+.filter2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.groupFilter {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.group1, .group2 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 .hoverFilter:hover {
@@ -183,8 +216,9 @@ nav a:hover {
 .infoCenter {
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 100%;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .iconInfo {
@@ -193,18 +227,13 @@ nav a:hover {
     border: 2px solid #F2F2F2;
     border-radius: 50%;
     margin-right: 12px;
-}
-
-.iconInfo2{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-left: 11px;
-    padding-top: 6px;
 }
 
-.iconInfo2 i {
+.iconInfo i {
     font-size: 15px;
 }
 
@@ -221,6 +250,11 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+.activites {
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
 
 /****** Hebergements ***********/
 .hebergements {
@@ -286,6 +320,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -337,15 +372,15 @@ nav a:hover {
     width: 100%;
 }
 
-.activitesH2 {
-    padding-left: 30px;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-
 .activiteTitle{
     padding-left: 20px;
     font-size: 16px;
+}
+
+.activitesH2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .activitesCard {
@@ -357,7 +392,8 @@ nav a:hover {
 
 .activitesCard .card {
     width: 22%;
-    padding: 0px
+    padding: 0px;
+    margin-top: 33px;
 }
 
 .activitesCard img {
@@ -377,27 +413,40 @@ nav a:hover {
     justify-content: space-around;
 }
 
-.group {
+.textGroup {
     padding: 20px
 }
 
-.group a {
+.textGroup a {
     font-size: 16px;
 }
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    
-    /***** Filtres *******/
 
-    .filterCenter {
-        width: 80%;
+    /****** Information *******/
+
+    .infoCenter {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 30px;
     }
-    /***** hebergements *****/
+
+    /****** Filtres ********/
+
+    .filter {
+        margin-top: 20px;
+    }
+    .filterCenter {
+        flex-direction: column;
+    }
+    
+    /***** Hébergements and populaires ****/ 
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -406,11 +455,6 @@ nav a:hover {
         width: 100%;
     }
 
-    .hebergements-cards img {
-        height: 100px;
-    }
-    
-    /****** Populaires ******/
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -434,17 +478,275 @@ nav a:hover {
         font-size: 13px;
     }
 
-    /******* Activités *******/
-
     .activitesCard img {
         height: 200px;
+    }
+
+    .footer {
+        margin-top: 60px;
     }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
-   
+    /****** General ***********/
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
+.main-container {
+    padding: 0;
+}
 
+/****** Header *******/
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    
+}
+
+nav a {
+    margin-left: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav img {
+    padding-top: 30px;
+}
+
+.navLink {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+.link1 {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 25px;
+}
+
+.link2 {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 25px;
+}
+
+.link1:hover {
+    color: #0065FC;
+    border-top: none;
+    border-bottom:2px solid #0065FC;
+}
+
+.link2:hover {
+    color: #0065FC;
+    border-top: none;
+    border-bottom:2px solid #0065FC;
+}
+
+nav a:hover {
+    border-top: none;
+    border-bottom: none;
+    padding-top: 0;
+}
+
+/****** Recherche *******/
+
+.find {
+    line-height: normal;
+    margin-top: 0;
+}
+
+.desktopButton{
+    display: none;
+}
+.mobileFind {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    
+}
+
+.search {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: black
+}
+
+.borderSearch {
+    border-radius: 15px;
+}
+
+.centerSearch {
+    justify-content: center;
+}
+
+.backBlue{
+    background-color: #0065FC;
+}
+
+.buttonSearch {
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mobileButton {
+    display: block;
+}
+
+.mobileButton i {
+    color: white;
+}
+
+/****** Filtres ********/
+
+.filter {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.filterCenter {
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter2 {
+    padding-left: 20px;
+}
+
+.groupFilter {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.group1, .group2 {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.textFilter {
+    font-size: 14px;
+}
+.borderFilter {
+    padding: 15px;
+    width: 50%;
+}
+
+/****** Information *******/
+
+.infoCenter {
+    width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+}
+
+.iconInfo {
+    min-width: 30px;
+}
+
+/****** Hebergements And Populaires ***********/
+
+.hebergements-and-populaires section{
+    border-radius: 0;
+}
+
+.hebergements-and-populaires {
+    flex-direction: column-reverse;
+}
+
+.hebergements-and-populaires .hebergements {
+    background-color: white;
+}
+
+/****** Hebergements ***********/
+
+.row1 {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.row2 {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hebergements-cards {
+    width: 100%;
+    
+}
+
+.hebergements-cards .card {
+    width: 100%;
+}
+
+/****** Populaires ***********/
+
+.populaires-cards {
+    flex-direction: column;
+    width: 100%;
+}
+
+.populaires-cards .card {
+    width: 100%;
+}
+
+.populaires {
+    padding: 0px;
+}  
+   
+/******** Activités ********/ 
+
+.activitesCard{
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.activitesCard .card{
+    width: 100%;
+}
+
+.activitesCard img {
+    height: 200px;
+}
+  
+/******* Footer *******/
+
+.footer {
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 15px;
+}
+
+}
